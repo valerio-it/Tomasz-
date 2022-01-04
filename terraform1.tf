@@ -1,15 +1,12 @@
-resource "aws_instance" "iac_in_action" {
-  ami               = var.ami_id
-  instance_type     = var.instance_type
-  availability_zone = var.availability_zone
- 
-  // dynamically retrieve SSH Key Name
-  key_name = aws_key_pair.iac_in_action.key_name
- 
-  // dynamically set Security Group ID (firewall)
-  vpc_security_group_ids = [aws_security_group.iac_in_action.id]
- 
-  tags = {
-    Name = "Terraform-managed EC2 Instance for IaC in Action"
-  }
+provider "aws" { 
+  access_key = "AKIASG3HC56QRZIU5N5C"
+  secret_key = "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"
+  region = "us-east-1"
 }
+  
+resource "aws_instance" "valery_aws2" { 
+
+  ami               = "ami-0ed9277fb7eb570c9"
+  instance_type     = "t2.micro"
+}
+ 
