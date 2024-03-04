@@ -1,5 +1,5 @@
 #--------------------------------------------
-# Highly Availabe Web Server
+# Highly Availabe Web Server если один сервер загибается начинает рабоать другой 
 # Create:
 # 1.Security Group for Web Server
 # 2. Automatic AMI
